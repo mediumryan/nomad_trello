@@ -1,0 +1,25 @@
+react-beautiful-dnd
+
+// 공식 사이트
+https://github.com/atlassian/react-beautiful-dnd
+// 인스톨 커맨드
+npm install react-beautiful-dnd --save
+
+DragDropContext => Droppable => Draggable 순서대로
+
+---------------------
+
+- DragDropContext
+
+드래그 앤 드랍이 가능한 에리어 지정
+onDragEnd 함수 추가 필요.
+
+- Droppable
+
+droppableId , index 속성 필수
+하위 개체는 함수로 불러야함
+
+- Draggable
+
+draggable, index 속성 필수
+하위 개체는 함수로 불러야함

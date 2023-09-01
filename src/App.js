@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider, styled } from 'styled-components';
+import './CSS/index.css';
+import { defaultTheme } from './theme';
+import ListBox from './Components/ListBox';
+import Header from './Components/Header';
+
+const MainWrapper = styled.div`
+    height: 100vh;
+    background-color: ${(props) => props.theme.bg_100};
+    color: ${(props) => props.theme.text_100};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 48px;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <ThemeProvider theme={defaultTheme}>
+            <MainWrapper>
+                <Header />
+                <ListBox />
+            </MainWrapper>
+        </ThemeProvider>
+    );
 }
 
 export default App;
